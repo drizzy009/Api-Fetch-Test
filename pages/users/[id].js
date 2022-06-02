@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import Link from 'next/link'
 
-function index({user}) {
+function Index({user}) {
   return (
     <div className='m-5'>
         <h3>{user.name}</h3>
@@ -19,7 +19,7 @@ function index({user}) {
   )
 }
 
-export default index
+export default Index
 
 export async function getServerSideProps (context) {
     try {

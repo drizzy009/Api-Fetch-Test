@@ -1,8 +1,9 @@
 import React from 'react'
 import axios from 'axios'
-import {useRouter} from 'next/router'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
- function index({users}) {
+ function Index({users}) {
 
   const router = useRouter()
   return (
@@ -28,11 +29,13 @@ import {useRouter} from 'next/router'
             })}
           </tbody>
         </table>
+        <hr/>
+        <p className='text-center mt-5'>Go back to <Link to href='/'><button className='btn btn-danger'>Homepage</button></Link></p>
     </div>
   )
 }
 
-export default index;
+export default Index;
 
 export async function getStaticProps (){
         try {
